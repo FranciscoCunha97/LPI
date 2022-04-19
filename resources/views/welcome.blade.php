@@ -46,7 +46,7 @@
                         <p class="lead my-4">
                             Plataforma para pesquisar publicações de todos os docentes da faculdade Fernando Pessoa
                         </p>
-                        <button class="btn btn-primary btn-lg" data-bs-toogle="modal" data-bs-target="#enroll">
+                        <button class="btn btn-primary btn-lg" data-bs-toogle="modal" onclick="window.location.href='{{route('pages.search')}}';">
                             Começa a Pesquisa
                         </button>
                     </div>
