@@ -24,35 +24,60 @@
             height: 100%;
             border-radius: 10px;
         }
+
         @media(min-with: 768px) {
             .news-input {
                 width: 50%;
             }
         }
+        table{
+            border-color:black;
+            border:4;
+            border-style: solid;
+            width:800px;
+            margin-top: 100px;
+        }
+        table.linhas td {
+            border-color:red;
+            border:2;
+            border-style:dotted;
+            padding-top: 1em ;
+            padding-bottom: 1em ;
+            font-family: Calibri}
+
+        table.linhas th {
+            background-color: grey;
+            border-color:black;
+            border:2;
+            border-style:solid;
+            font-family: Arial}
+
+
     </style>
 </head>
 <body>
 <!--Navbar-->
-@include('layout.navbarSearchPage')
+@include('layout.navbarSearchPage');
 
 <!--Table-->
 <div class="container">
     <div class="table-responsive">
-        <table class="table">
-            <thead>
-            <tr class="cliente">
-                <th class="cor">Quantidade</th>
-            </tr>
-            <tr class="clientess">
-                <th class="cor">Nº.Pedido</th>
-            </tr>
-            <tr class="fiscal">
-                <th class="cor">Nota Fiscal</th>
-            </tr>
-            <tr class="entprevista">
-                <th class="cor">Entrega Prevista</th>
+        <table class="linhas" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Nome </th>
+                <th scope="col">Tipo de Publicação</th>
+                <th scope="col">Titulo de Publicação</th>
+                <th scope="col">Data de Publicação</th>
             </tr>
             </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
         </table>
     </div>
 </div>
