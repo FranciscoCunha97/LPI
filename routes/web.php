@@ -18,6 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 })->name('pages.welcome');
 
-Route::get('/search',function (){
-    return view('search');
-})->name('pages.search');
+Route::get('/search',[SearchController::class,'search'])->name('pages.search');
+

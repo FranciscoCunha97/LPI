@@ -1,86 +1,53 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!doctype html>
+<html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
-    <title>Search Curriculum</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS Style -->
-    <style>
-        body::before {
-            display: block;
-            content: '';
-            height: 50px;
-        }
-        #map {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-
-        @media(min-with: 768px) {
-            .news-input {
-                width: 50%;
-            }
-        }
-        table{
-            border-color:black;
-            border:4;
-            border-style: solid;
-            width:800px;
-            margin-top: 100px;
-        }
-        table.linhas td {
-            border-color:red;
-            border:2;
-            border-style:dotted;
-            padding-top: 1em ;
-            padding-bottom: 1em ;
-            font-family: Calibri}
-
-        table.linhas th {
-            background-color: grey;
-            border-color:black;
-            border:2;
-            border-style:solid;
-            font-family: Arial}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
 
-    </style>
 </head>
 <body>
+
 <!--Navbar-->
 @include('layout.navbarSearchPage');
 
-<!--Table-->
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="container">
-    <div class="table-responsive">
-        <table class="linhas" align="center">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">Nome </th>
-                <th scope="col">Tipo de Publicação</th>
-                <th scope="col">Titulo de Publicação</th>
-                <th scope="col">Data de Publicação</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-
-            </tr>
-        </table>
-    </div>
+    <h2>This is a Container</h2>
+    <table class="table table-fluid" id="myTable">
+       <thead>
+        <tr><th>Name</th><th>???</th></tr>
+       </thead>
+        <tbody>
+        @foreach($funcionarios as $funcionario)
+            <tr><td>{{$funcionario->NomeProfissional}}</td><td></td></tr>
+        @endforeach
+        </tbody>
+    </table>
 </div>
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+    } );
+</script>
 </body>
 </html>
