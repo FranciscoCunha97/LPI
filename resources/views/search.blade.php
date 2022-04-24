@@ -34,11 +34,11 @@
     <h2>This is a Container</h2>
     <table class="table table-fluid" id="myTable">
        <thead>
-        <tr><th>Name</th><th>???</th></tr>
+        <tr><th>Nome</th><th></th></tr>
        </thead>
         <tbody>
         @foreach($funcionarios as $funcionario)
-            <tr><td>{{$funcionario->NomeProfissional}}</td><td></td></tr>
+            <tr><td>{{$funcionario->NomeProfissional}}</td><td><button type="button" class="btn btn-success">Ver Mais</button></td></tr>
         @endforeach
         </tbody>
     </table>

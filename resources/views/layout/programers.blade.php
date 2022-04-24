@@ -34,7 +34,7 @@
 <body>
 <!--Programers-->
 <section>
-    <section id="fundadores" class="p-5 bg-primary">
+    <section id="fundadores" class="p-5 bg-success">
         <div class="container">
             <h2 class="text-center text-white">Os Criadores</h2>
             <p class="lead text-center text-white mb-5">

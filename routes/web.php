@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('/search',[SearchController::class,'search'])->name('pages.search');
 
+Route::get('/searchAll',[SearchController::class,'searchAll'])->name('pages.searchAll');
