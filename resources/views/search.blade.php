@@ -18,31 +18,41 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
+    <style>
+        div{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 50%;
+        }
+        table.table-fluid{
+            height: 80%;
+        }
+    </style>
 
 </head>
 <body>
 
 <!--Navbar-->
 @include('layout.navbarSearchPage');
-
-<br>
-<br>
-<br>
 <br>
 <br>
 <div class="container">
-    <h2>This is a Container</h2>
-    <table class="table table-fluid" id="myTable">
-       <thead>
+    <h1>Docentes</h1>
+    <table class="table table-fluid table-success table-striped" id="myTable">
+       <thead class="table-dark">
         <tr><th>Nome</th><th></th></tr>
        </thead>
         <tbody>
         @foreach($funcionarios as $funcionario)
-            <tr><td>{{$funcionario->NomeProfissional}}</td><td><button type="button" class="btn btn-success">Ver Mais</button></td></tr>
+            <tr><td>{{$funcionario->NomeProfissional}}</td><td align="center"><button type="button" class="btn btn-success">Ver Curriculo</button></td></tr>
         @endforeach
         </tbody>
     </table>
 </div>
+<br>
+<br>
+<br>
 
 <script>
     $(document).ready( function () {

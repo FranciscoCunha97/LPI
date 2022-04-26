@@ -18,31 +18,40 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-
+    <style>
+        div{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 50%;
+        }
+        table.table-fluid{
+            height: 80%;
+        }
+    </style>
 </head>
 <body>
 
 <!--Navbar-->
-@include('layout.navbarSearchPage');
-
-<br>
-<br>
-<br>
+@include('layout.navbarPublications');
 <br>
 <br>
 <div class="container">
-    <h2>This is a Container</h2>
-    <table class="table table-fluid" id="myTable">
-        <thead>
-        <tr><th>Nome</th><th>Tipo</th><th>Titulo</th><th>Data Publicação</th></tr>
+    <h1>Publicações</h1>
+    <table class="table table-fluid table-success table-striped" id="myTable">
+        <thead class="table-dark">
+        <tr><th>Titulo</th><th>Tipo</th><th>Autor</th><th>Data Publicação</th></tr>
         </thead>
         <tbody>
         @foreach($curriculos as $curriculo)
-            <tr><td>{{$curriculo->NomeProfissional}}</td><td>{{$curriculo->Tipo}}</td><td>{{$curriculo->Titulo}}</td><td>{{$curriculo->DataPublicacao}}</td></tr>
+            <tr><td>{{$curriculo->Titulo}}</td><td>{{$curriculo->Tipo}}</td><td>{{$curriculo->NomeProfissional}}</td><td>{{$curriculo->DataPublicacao}}</td></tr>
         @endforeach
         </tbody>
     </table>
 </div>
+<br>
+<br>
+<br>
 
 <script>
     $(document).ready( function () {

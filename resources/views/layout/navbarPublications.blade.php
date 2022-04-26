@@ -47,7 +47,7 @@
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="{{route('pages.searchAll')}}" class="nav-link">Ver Todas Publicações</a>
+                    <a href="{{route('pages.search')}}" class="nav-link">Back</a>
             </ul>
         </div>
     </div>
