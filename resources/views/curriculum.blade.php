@@ -38,14 +38,14 @@
 <br>
 <br>
 <div class="container">
-    <h1>Docentes</h1>
+    <h1>dawdawd</h1>
     <table class="table table-fluid table-success table-striped" id="myTable">
-       <thead class="table-dark">
-        <tr><th>Nome</th><th></th></tr>
-       </thead>
+        <thead class="table-dark">
+        <tr><th>Titulo</th><th>Tipo</th><th>Data Publicação</th></tr>
+        </thead>
         <tbody>
-        @foreach($funcionarios as $funcionario)
-            <tr><td>{{$funcionario->NomeProfissional}}</td><td align="center"><a href="{{route('pages.curriculum',$funcionario->CienciaVitaeID)}}" class="btn btn-success">Ver Curriculo</a></td></tr>
+        @foreach($docentes as $docente)
+            <tr><td>{{$docente->Titulo}}</td><td>{{$docente->Tipo}}</td><td>{{$docente->DataPublicacao}}</td></tr>
         @endforeach
         </tbody>
     </table>

@@ -13,9 +13,8 @@ class SearchController extends Controller
     public function search(){
         //$dataCurriculo = Curriculo::all();
         $dataFuncionario = DB::select('SELECT DISTINCT NomeProfissional,CienciaVitaeID FROM funcionarios WHERE CienciaVitaeID != null ');
-        return view('search')->with(['funcionarios'=>$dataFuncionario]);
+        return view('search')->with(['funcionarios'=>$dataFuncionario],'docentes');
     }
-
 
     /*
      * Pesquisa todos os curriculos de todos os docentes
@@ -24,7 +23,11 @@ class SearchController extends Controller
         $dataCurriculo = DB::select('Select funcionarios.NomeProfissional, Curriculos.CienciaVitaeID, Curriculos.Tipo, Curriculos.Titulo, Curriculos.DataPublicacao
                                             From funcionarios INNER JOIN Curriculos ON funcionarios.CienciaVitaeID = Curriculos.CienciaVitaeID');
         return view('allCurriculos')->with(['curriculos'=>$dataCurriculo]);
+    }
 
+    public function curriculumId($cienciaVitaeId){
+        $docente = DB::select("SELECT Curriculos.Tipo, Curriculos.Titulo,Curriculos.DataPublicacao FROM Curriculos WHERE CienciaVitaeID = '$cienciaVitaeId'");
+        return view('curriculum')->with(['docentes'=>$docente]);
     }
 
 
