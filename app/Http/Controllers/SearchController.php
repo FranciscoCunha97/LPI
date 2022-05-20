@@ -12,7 +12,7 @@ class SearchController extends Controller
      */
     public function search(){
         //$dataCurriculo = Curriculo::all();
-        $dataFuncionario = DB::select('SELECT DISTINCT NomeProfissional,CienciaVitaeID FROM funcionarios WHERE CienciaVitaeID != null ');
+        $dataFuncionario = DB::select('Select distinct NomeProfissional,CienciaVitaeID from funcionarios where CienciaVitaeID != null ');
         return view('search')->with(['funcionarios'=>$dataFuncionario],'docentes');
     }
 

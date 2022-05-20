@@ -7,12 +7,15 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="resources/css/style.css">
         <title>Search Curriculum</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
+
         <!-- CSS Style -->
+        <!--
         <style>
             body::before {
                 display: block;
@@ -30,6 +33,7 @@
                 }
             }
         </style>
+        -->
         </head>
         <body>
         <!--Navbar-->
@@ -50,7 +54,7 @@
                             Começa a Pesquisa
                         </button>
                     </div>
-                    <img class="img-fluid w-50 d-none d-sm-block" src="resources/img/showcase2.png" alt=""/>
+                    <img class="img-fluid w-50 d-none d-sm-block" src="{{asset('storage/images/showcase2.jpg')}}" alt="" height="200" width="200"/>
                 </div>
             </div>
         </section>
@@ -63,8 +67,32 @@
         @include('layout.programers')
 
         <!--Contact&Map-->
-        @include('layout.contact&map')
-
+        <section class="p-5">
+            <div class="container">
+                <div class="row-g-4">
+                    <div class="col-md">
+                        <h2 class="text-center mb-4">Contactos</h2>
+                        <ul class="list-group list-goup-flush lead">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Localização:</span> Universidade Fernando Pessoa
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Telefone:</span> 919191919
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Email do Estudante:</span> 35545@ufp.edu.pt
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Email do Estudante:</span> 35545@ufp.edu.pt
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--Footer-->
         <footer class="p-5 bg-dark text-white text-center position-relative">
             <div class="container">
@@ -76,5 +104,15 @@
             </div>
         </footer>
 
+        <script>
+            mapboxgl.accessToken =
+                'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [-71.060982, 42.35725],
+                zoom: 18,
+            });
+        </script>
     </body>
 </html>
