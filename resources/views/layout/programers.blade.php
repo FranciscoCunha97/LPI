@@ -44,7 +44,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-light">
                         <div class="card-body text center">
-                            <img class="rounded-circle mb-3" src="{{asset('storage/images/1626812421361.jpg')}}" alt="" height="200" width="200" hspace="30">
+                            <img class="rounded-circle mb-3" src="{{asset('storage/images/francisco.jpg')}}" alt="" height="200" width="200" hspace="30">
                             <h3 class="card-title mb-3">Francisco Cunha</h3>
                             <p class="card-text">
                                 (Texto sobre mim)
@@ -58,6 +58,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-light">
                         <div class="card-body text center">
+                            <img class="rounded-circle mb-3" src="{{asset('storage/images/vasco.jpg')}}" alt="" height="200" width="200" hspace="30">
                             <h3 class="card-title mb-3">Vasco Cardoso</h3>
                             <!--Falta meter a imagem e assim-->
                             <p class="card-text">

@@ -54,7 +54,7 @@
                             Começa a Pesquisa
                         </button>
                     </div>
-                    <img class="img-fluid w-50 d-none d-sm-block" src="{{asset('storage/images/showcase2.jpg')}}" alt="" height="200" width="200"/>
+                    <img class="img-fluid w-50 d-none d-sm-block" src="{{asset('storage/images/curriculum-clipart-1.jpg')}}" alt="" height="200" width="200"/>
                 </div>
             </div>
         </section>
