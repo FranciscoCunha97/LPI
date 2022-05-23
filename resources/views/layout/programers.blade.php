@@ -44,8 +44,8 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-light">
                         <div class="card-body text center">
+                            <img class="rounded-circle mb-3" src="{{asset('storage/images/francisco.jpg')}}" alt="" height="200" width="200" hspace="30">
                             <h3 class="card-title mb-3">Francisco Cunha</h3>
-                            <!--Falta meter a imagem e assim-->
                             <p class="card-text">
                                 (Texto sobre mim)
                                 <a href="https://www.facebook.com/profile.php?id=100013732751272"><i class="bi bi-facebook text-dark mx-1"></i></a>
@@ -58,6 +58,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-light">
                         <div class="card-body text center">
+                            <img class="rounded-circle mb-3" src="{{asset('storage/images/vasco.jpg')}}" alt="" height="200" width="200" hspace="30">
                             <h3 class="card-title mb-3">Vasco Cardoso</h3>
                             <!--Falta meter a imagem e assim-->
                             <p class="card-text">
