@@ -52,7 +52,7 @@ foreach($publicacoes as $publicacao){
 
     if(strcmp($id_publicacao, "P101")==0){
         
-        $tipo = "journal-article";
+        $tipo = "Artigo de Jornal";
         $title = $publicacao->xpath('output:journal-article/output:article-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:journal-article/output:publication-date/@year');
@@ -60,7 +60,7 @@ foreach($publicacoes as $publicacao){
         
 
     }else if(strcmp($id_publicacao, "P102")==0){
-        $tipo = "journal-issue";
+        $tipo = "Edição de Jornal";
         $title = $publicacao->xpath('output:journal-issue/output:issue-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:journal-issue/output:publication-date/@year');
@@ -68,7 +68,7 @@ foreach($publicacoes as $publicacao){
         
 
     }else if(strcmp($id_publicacao, "P103")==0){
-        $tipo = "book";
+        $tipo = "Livro";
         $title = $publicacao->xpath('output:book/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:book/output:publication-year');
@@ -76,7 +76,7 @@ foreach($publicacoes as $publicacao){
         
 
     }else if(strcmp($id_publicacao, "P104")==0){
-        $tipo = "edited-book";
+        $tipo = "Edição de Livro";
         $title = $publicacao->xpath('output:edited-book/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:edited-book/output:publication-year');
@@ -84,103 +84,103 @@ foreach($publicacoes as $publicacao){
         
 
     }else if(strcmp($id_publicacao, "P105")==0){
-        $tipo = "book-chapter";
+        $tipo = "Capítulo de Livro";
         $title = $publicacao->xpath('output:book-chapter/output:chapter-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:book-chapter/output:publication-year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P106")==0){
-        $tipo = "book-review";
+        $tipo = "Revisão de Livro";
         $title = $publicacao->xpath('output:book-review/output:review-title');
         $t = strval($title[0]);
 
     }else if(strcmp($id_publicacao, "P107")==0){
-        $tipo = "translation";
+        $tipo = "Tradução";
         $title = $publicacao->xpath('output:translation/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:translation/output:publication-year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P108")==0){
-        $tipo = "dissertation";
+        $tipo = "Dissertação";
         $title = $publicacao->xpath('output:dissertation/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:dissertation/output:completion-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P110")==0){
-        $tipo = "newspapper-article";
+        $tipo = "Artigo de Jornal";
         $title = $publicacao->xpath('output:newspapper-article/output:article-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:newspapper-article/output:publication-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P111")==0){
-        $tipo = "newsletter-article";
+        $tipo = "Artigo de Boletim Informativo";
         $title = $publicacao->xpath('output:newsletter-article/output:article-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:newsletter-article/output:publication-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P112")==0){
-        $tipo = "encyclopedia-entry";
+        $tipo = "Entrada Enciclopédia";
         $title = $publicacao->xpath('output:encyclopedia-entry/output:entry-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:encyclopedia-entry/output:publication-year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P113")==0){
-        $tipo = "magazine-article";
+        $tipo = "Artigo de Revista";
         $title = $publicacao->xpath('output:magazine-article/output:article-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:magazine-article/output:publication-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P114")==0){
-        $tipo = "dictionary-entry";
+        $tipo = "Entrada de Dicionário";
         $title = $publicacao->xpath('output:dictionary-entry/output:entry-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:dictionary-entry/output:publication-year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P115")==0){
-        $tipo = "report";
+        $tipo = "Relatório";
         $title = $publicacao->xpath('output:report/output:report-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:report/output:date-submitted/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P116")==0){
-        $tipo = "working-paper";
+        $tipo = "Documento de Trabalho";
         $title = $publicacao->xpath('output:working-paper/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:working-paper/output:publication-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P118")==0){
-        $tipo = "manual";
+        $tipo = "Manual";
         $title = $publicacao->xpath('output:manual/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:manual/output:publication-year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P119")==0){
-        $tipo = "online-resource";
+        $tipo = "Recurso Online";
         $title = $publicacao->xpath('output:online-resource/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:online-resource/output:creation-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P121")==0){
-        $tipo = "website";
+        $tipo = "Web Site";
         $title = $publicacao->xpath('output:website/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:website/output:launch-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P122")==0){  // duas datas
-        $tipo = "conference-paper";
+        $tipo = "Documento de Conferência";
         $title = $publicacao->xpath('output:conference-paper/output:paper-title');
         $t = strval($title[0]);
         //$data = $publicacao->xpath('output:conference-paper/output:presentation-date/@year');
@@ -189,48 +189,48 @@ foreach($publicacoes as $publicacao){
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P123")==0){
-        $tipo = "conference-abstract";
+        $tipo = "Resumo de Conferência";
         $title = $publicacao->xpath('output:conference-abstract/output:article-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:conference-abstract/output:publication-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P124")==0){
-        $tipo = "conference-poster";
+        $tipo = "Cartaz de Conferência";
         $title = $publicacao->xpath('output:conference-poster/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:conference-poster/output:conference-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P126")==0){
-        $tipo = "preface-postface";
+        $tipo = "Prefácio Posfácio";
         $title = $publicacao->xpath('output:preface-postface/output:preface-postface-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:preface-postface/output:publication-year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P301")==0){
-        $tipo = "artistic-exhibition";
+        $tipo = "Exposição Artistica";
         $title = $publicacao->xpath('output:artistic-exhibition/output:the-title-of-work');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:artistic-exhibition/output:date-of-first-performance/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P306")==0){
-        $tipo = "radio-tv-program";
+        $tipo = "Programa Rádio-TV";
         $title = $publicacao->xpath('output:radio-tv-program/output:program-title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:radio-tv-program/output:broadcast-date/@year');
         $d = strval($data[0]);
 
     }else if(strcmp($id_publicacao, "P311")==0){ // sem data
-        $tipo = "visual-artwork";
+        $tipo = "Artes Visuais";
         $title = $publicacao->xpath('output:visual-artwork/output:title');
         $t = strval($title[0]);
 
 
     }else if(strcmp($id_publicacao, "P508")==0){
-        $tipo = "other-output";
+        $tipo = "Outros Tipos";
         $title = $publicacao->xpath('output:other-output/output:title');
         $t = strval($title[0]);
         $data = $publicacao->xpath('output:other-output/output:publication-date/@year');
