@@ -40,8 +40,11 @@
                     <div class="col md">
                         <h2>Sobre a Aplicação Web</h2>
                         <p class="lead">
-                            Esta Aplicação Web Serve para pesquisar................................................................................................(fazer texto bonito)
+                            Este WebSite foi criado no ambito do projeto final do curso da Licenciatura em Engenharia Inforamtica e segue o proposito da consulta e analise do Curriculo Vitae de varios profissionais da Universidade Fernando Pessoa bem como das publicações dos mesmos.
                         </p>
+                    </div>
+                    <div class="col-md">
+                        <img class="img-fluid" src="{{asset('storage/images/web.png')}}" alt="" width="300" height="300">
                     </div>
                 </div>
             </div>

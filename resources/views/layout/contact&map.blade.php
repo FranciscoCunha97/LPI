@@ -33,7 +33,7 @@
 </head>
 <body>
 <!--Contact&Map-->
-    <section class="p-5">
+    <section id="contactos" class="p-5">
         <div class="container">
             <div class="row-g-4">
                 <div class="col-md">
@@ -43,13 +43,13 @@
                             <span class="fw-bold">Localização:</span> Universidade Fernando Pessoa
                         </li>
                         <li class="list-group-item">
-                            <span class="fw-bold">Telefone:</span> 919191919
+                            <span class="fw-bold">Telefone:</span> +351 225 071 300
                         </li>
                         <li class="list-group-item">
                             <span class="fw-bold">Email do Estudante:</span> 35545@ufp.edu.pt
                         </li>
                         <li class="list-group-item">
-                            <span class="fw-bold">Email do Estudante:</span> 35545@ufp.edu.pt
+                            <span class="fw-bold">Email do Estudante:</span> 35314@ufp.edu.pt
                         </li>
                     </ul>
                 </div>

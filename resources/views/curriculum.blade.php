@@ -38,7 +38,10 @@
 <br>
 <br>
 <div class="container">
-    <h1>dawdawd</h1>
+    @foreach($docentes as $docente)
+        <h1>{{$docente->NomeProfissional}}</h1>
+    @endforeach
+
     <table class="table table-fluid table-success table-striped" id="myTable">
         <thead class="table-dark">
         <tr><th>Titulo</th><th>Tipo</th><th>Data Publicação</th></tr>

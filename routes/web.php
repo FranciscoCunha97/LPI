@@ -23,3 +23,5 @@ Route::get('/search',[SearchController::class,'search'])->name('pages.search');
 Route::get('/searchAll',[SearchController::class,'searchAll'])->name('pages.searchAll');
 
 Route::get('/curriculum/{CienciaVitaeId}',[SearchController::class,'curriculumId'])->name('pages.curriculum');
+
+
