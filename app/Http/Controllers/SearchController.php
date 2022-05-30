@@ -26,7 +26,7 @@ class SearchController extends Controller
     }
 
     public function curriculumId($cienciaVitaeId){
-        $docente = DB::select("SELECT Tipo, Titulo, DataPublicacao FROM Curriculos WHERE CienciaVitaeID = '$cienciaVitaeId'");
+        $docente = DB::select("SELECT Tipo, Titulo, DataPublicacao,funcionarios.NomeProfissional FROM Curriculos INNER JOIN funcionarios on Curriculos.CienciaVitaeID = funcionarios.CienciaVitaeID WHERE Curriculos.CienciaVitaeID = '$cienciaVitaeId'");
         return view('curriculum')->with(['docentes'=>$docente]);
     }
 }

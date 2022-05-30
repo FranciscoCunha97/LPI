@@ -40,6 +40,7 @@
 <div class="container">
     @foreach($docentes as $docente)
         <h1>{{$docente->NomeProfissional}}</h1>
+        @break
     @endforeach
 
     <table class="table table-fluid table-success table-striped" id="myTable">

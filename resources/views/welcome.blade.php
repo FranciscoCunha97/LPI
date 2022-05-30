@@ -44,11 +44,11 @@
             <div class="container">
                 <div class="d-sm-flex align-items-center justify-content-between">
                     <div>
-                        <h1>Procura <spant class="text-warning">
-                                Curriculos
+                        <h1>Pesquisa de <spant class="text-warning">
+                                Produção Científica
                             </spant></h1>
                         <p class="lead my-4">
-                            Plataforma para pesquisar publicações de todos os docentes da faculdade Fernando Pessoa
+                            Plataforma onde pode pesquisar as publicações de todos os profissionais da Universidade Fernando Pessoa
                         </p>
                         <button class="btn btn-success btn-lg" data-bs-toogle="modal" onclick="window.location.href='{{route('pages.search')}}';">
                             Começa a Pesquisa

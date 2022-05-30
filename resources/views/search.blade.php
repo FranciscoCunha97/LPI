@@ -45,7 +45,7 @@
        </thead>
         <tbody>
         @foreach($funcionarios as $funcionario)
-            <tr><td>{{$funcionario->NomeProfissional}}</td><td align="center"><a href="{{route('pages.curriculum',$funcionario->CienciaVitaeID)}}" class="btn btn-success">Ver Curriculo</a></td></tr>
+            <tr><td>{{$funcionario->NomeProfissional}}</td><td align="center"><a href="{{route('pages.curriculum',$funcionario->CienciaVitaeID)}}" class="btn btn-success">Ver Publicações</a></td></tr>
         @endforeach
         </tbody>
     </table>
